@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="SuiteTest" verbose="1" >
+
+    <test name="Setup Test" >
+        <parameter name="uritype" value="iso2URI">
+        <classes>
+            <class name="org.apitestrestassured.test.TestSetup" />
+        </classes>
+        </parameter>
+    </test>
+
+
+
+
+</suite>
