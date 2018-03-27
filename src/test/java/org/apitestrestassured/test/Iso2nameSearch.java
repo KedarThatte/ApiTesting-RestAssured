@@ -17,10 +17,10 @@ import static io.restassured.path.json.JsonPath.from;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class TestSetup extends Base{
+public class Iso2nameSearch extends Base{
 
     @Test
-    public void searchIn() {
+    public void iso2NameSearchIn() {
 
         CopyOnWriteArraySet jsonAsArrayList=null;
         Response resp ;
@@ -38,8 +38,8 @@ public class TestSetup extends Base{
 
 
     }
-    @Test(dependsOnMethods = "searchIn")
-    public void searchUs () {
+    @Test(dependsOnMethods = "iso2NameSearchIn")
+    public void iso2NameSearchUs () {
 
         CopyOnWriteArraySet jsonAsArrayList=null;
         Response resp;
