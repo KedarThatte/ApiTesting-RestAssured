@@ -5,6 +5,7 @@ import io.restassured.internal.assertion.Assertion;
 import io.restassured.response.Response;
 import org.apitestrestassured.core.Base;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -19,12 +20,11 @@ import static org.hamcrest.Matchers.equalTo;
 public class TestSetup extends Base{
 
     @Test
-    public void test01 () {
+    public void searchIn() {
 
         CopyOnWriteArraySet jsonAsArrayList=null;
-        Response resp;
-        resp=
-        given()
+        Response resp ;
+        resp=   given()
                 .spec (reqspec)
                 .when ()
                 .log()
@@ -34,17 +34,15 @@ public class TestSetup extends Base{
                 .contentType (ContentType.JSON)
                 .statusCode (200)
                 .extract().response();
-        System.out.println(resp.prettyPrint().toString());
-        Assert.assertEquals("200",resp.statusCode());
-        //System.out.println(resp);
+        Reporter.log(resp.prettyPrint());
 
 
     }
-    @Test(dependsOnMethods = "test01")
-    public void test02 () {
+    @Test(dependsOnMethods = "searchIn")
+    public void searchUs () {
 
         CopyOnWriteArraySet jsonAsArrayList=null;
-        String resp;
+        Response resp;
         resp=
                 given()
                         .spec (reqspec)
@@ -55,8 +53,8 @@ public class TestSetup extends Base{
                         .then ()
                         .contentType (ContentType.JSON)
                         .statusCode (200)
-                        .extract().response().prettyPrint();
-        //System.out.println(resp);
+                        .extract().response();
+        Reporter.log(resp.prettyPrint());
 
 
     }
