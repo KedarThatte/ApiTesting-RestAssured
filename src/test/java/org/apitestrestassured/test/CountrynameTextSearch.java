@@ -24,10 +24,10 @@ public class CountrynameTextSearch extends Base {
                 .uri().log().parameters()
                 .get (testdata.getProperty("txtschAfg"))
                 .then ()
-                //.contentType (ContentType.)
+                .contentType (ContentType.JSON)
                 .statusCode (200)
                 .extract().response();
-        Reporter.log(resp.prettyPrint().toString());
+        Reporter.log(resp.prettyPrint());
     }
     @Test(dependsOnMethods = "txtCountryNameSearch1")
     public void txtCountryNameSearch2() {
@@ -42,9 +42,9 @@ public class CountrynameTextSearch extends Base {
                         .uri().log().parameters()
                         .get (testdata.getProperty("txtschChi"))
                         .then ()
-                        //.contentType (ContentType.TEXT)
+                        .contentType (ContentType.JSON)
                         .statusCode (200)
                         .extract().response();
-        Reporter.log(resp.prettyPrint().toString());
+        Reporter.log(resp.prettyPrint());
     }
 }

@@ -16,7 +16,7 @@
 
   <dependencies>
 
-    <dependency>
+    <!--<dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <version>3.0.5</version>
@@ -28,7 +28,7 @@
       <artifactId>testng</artifactId>
       <version>6.10</version>
       <scope>test</scope>
-    </dependency>
+    </dependency>-->
     <dependency>
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
