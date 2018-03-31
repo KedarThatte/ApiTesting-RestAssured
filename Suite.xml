@@ -1,27 +1,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="SuiteTest" verbose="1" parallel="methods" thread-count="2" >
+<suite name="SuiteTest" verbose="1" parallel="methods" thread-count="2"  >
 
-    <test name="Country Name Text Search" >
-        <parameter name="uritype" value="textURI">
+    <test name="Text Country Name Search" >
+        <parameter name="uritype" value="countrytextURI">
             <classes>
                 <class name="org.apitestrestassured.test.CountrynameTextSearch" />
             </classes>
         </parameter>
     </test>
 
-    <test name="Iso2 Name Search" >
-        <parameter name="uritype" value="iso2URI">
+    <test name="Iso2 Country Name Search" >
+        <parameter name="uritype" value="countryiso2URI">
             <classes>
                 <class name="org.apitestrestassured.test.Iso2nameSearch" />
             </classes>
         </parameter>
     </test>
 
-    <test name="Iso3 Name Search" >
-        <parameter name="uritype" value="iso3URI">
+    <test name="Iso3 Country Name Search" >
+        <parameter name="uritype" value="countryiso3URI">
             <classes>
                 <class name="org.apitestrestassured.test.Iso3nameSearch" />
+            </classes>
+        </parameter>
+   </test>
+
+    <test name="Text Country State Name Search" >
+        <parameter name="uritype" value="stateTextURI">
+            <classes>
+                <class name="org.apitestrestassured.test.CountryStateTextSearch" />
             </classes>
         </parameter>
     </test>
