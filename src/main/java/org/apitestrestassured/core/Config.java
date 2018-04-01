@@ -10,6 +10,7 @@ public class Config {
     public static Properties config;
     public static Properties testdata;
 
+
     @BeforeSuite
     public void loadData() throws IOException {
         config = new Properties();
